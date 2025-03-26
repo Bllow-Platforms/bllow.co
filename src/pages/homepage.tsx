@@ -2,6 +2,7 @@ import { Header } from "@/components/modules/header";
 import HeroNotificationCards from "@/components/modules/hero/hero-notification-cards";
 import { DefaultTypography } from "@/components/modules/typography";
 import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router";
 const Homepage = () => {
   return (
     <div className="">
@@ -28,9 +29,11 @@ const Homepage = () => {
                   </DefaultTypography>
                 </div>
 
-                <Button className="bg-white rounded-full text-background text-sm font-semibold px-8 py-6">
-                  Join the waitlist
-                </Button>
+                <NavLink to={"/waitlist"} className={"block"}>
+                  <Button className="bg-white cursor-pointer rounded-full text-background text-sm font-semibold px-8 py-6">
+                    Join the waitlist
+                  </Button>
+                </NavLink>
 
                 <DefaultTypography
                   variant="p"
