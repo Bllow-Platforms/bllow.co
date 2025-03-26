@@ -3,8 +3,21 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import Homepage from "./pages/homepage";
 
-{/* <StrictMode> */}
+import { createBrowserRouter, RouterProvider } from "react-router";
+import ScreenLoader from "./components/modules/screen-loader";
+
+let router = createBrowserRouter([
+  {
+    path: "/",
+    Component: Homepage,
+    loader: ScreenLoader,
+  },
+]);
+
+{
+  /* <StrictMode> */
+}
 createRoot(document.getElementById("root")!).render(
-    <Homepage />
-  );
-  // </StrictMode>
+  <RouterProvider router={router} />
+);
+// </StrictMode>
