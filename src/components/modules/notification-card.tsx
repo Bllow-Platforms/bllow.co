@@ -1,5 +1,7 @@
-import { FC, ReactNode } from "react";
+import { CSSProperties, FC, ReactNode, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 interface NotificationCardProps {
   icon: ReactNode | string;
@@ -7,6 +9,7 @@ interface NotificationCardProps {
   user: string;
   time: string;
   className?: string;
+  style?:CSSProperties
 }
 
 export const NotificationCard: FC<NotificationCardProps> = ({
@@ -15,9 +18,14 @@ export const NotificationCard: FC<NotificationCardProps> = ({
   user,
   time,
   className,
+  style
 }) => {
+  const ref = useRef(null!);
+  // const tl = gsap.timeline()
+
   return (
     <div
+    ref={ref}
       className={cn(
         "absolute bg-white/10 backdrop-blur-md rounded-4xl px-6 py-6 z-10",
         "border border-white/30 shadow-lg backdrop-blur-lg",
@@ -25,6 +33,7 @@ export const NotificationCard: FC<NotificationCardProps> = ({
 
         className
       )}
+      style={style}
     >
       <div className="flex items-center gap-3">
         <div className="w-[50px] rounded-lg flex justify-center items-center h-[50px] bg-gray-100/25">

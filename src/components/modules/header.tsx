@@ -22,7 +22,7 @@ export const Header: FC<IHeaderProps> = ({ isAuthenticated = false }) => {
           </a>
         </div>
         <button
-          className="md:hidden text-white/90 hover:text-white"
+          className="md:hidden cursor-pointer text-white/90 hover:text-white"
           onClick={toggleMobileMenu}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,7 +78,7 @@ export const Header: FC<IHeaderProps> = ({ isAuthenticated = false }) => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background border-t border-white/10 p-4 md:hidden">
+          <div className="absolute border  top-full left-0 right-0 bg-background border-t border-white/10 p-4 md:hidden">
             <nav className="flex flex-col gap-4">
               <a
                 href="/faq"
@@ -96,20 +96,20 @@ export const Header: FC<IHeaderProps> = ({ isAuthenticated = false }) => {
                 <Input
                   type="search"
                   placeholder="Search Creators"
-                  className="w-full text-center bg-white/10 border-white/10 text-white placeholder:text-white/50 focus:border-white/20"
+                  className="w-full text-center bg-white/10 py-5 border-white/10 text-white placeholder:text-white/50 focus:border-white/20"
                 />
               </div>
               {!isAuthenticated ? (
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-4">
                   <a href={"/auth"}>
-                    <Button className="w-full bg-white text-primary hover:bg-white/90">
+                    <Button className="w-full bg-white text-primary hover:bg-white/90 py-5">
                       Sign Up
                     </Button>
                   </a>
                   <a href={"/auth/signin"}>
                     <Button
                       variant="outline"
-                      className="w-full text-white hover:text-white/90 hover:bg-white/10"
+                      className="w-full py-5 text-white hover:text-white/90 hover:bg-white/10"
                     >
                       Log In
                     </Button>

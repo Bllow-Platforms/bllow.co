@@ -128,4 +128,7 @@
   .bg-background {
     background: var(--primary-color);
   }
+  .text-background {
+    color: var(--primary-color);
+  }
 }
