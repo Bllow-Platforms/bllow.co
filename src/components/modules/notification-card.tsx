@@ -65,7 +65,7 @@ interface NotificationBannerProps extends NotificationCardProps {
 
 export const NotificationBanner = ({
   className,
-  style,
+  // style,
   name,
   role,
   message,

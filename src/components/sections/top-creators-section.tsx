@@ -1,4 +1,3 @@
-import { DefaultTypography } from "../modules/typography";
 import SectionHeader from "./section-header";
 
 const creators = [

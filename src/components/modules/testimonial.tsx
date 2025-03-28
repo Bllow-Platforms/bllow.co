@@ -7,9 +7,9 @@ import {
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-type Props = {};
+// type Props = {};
 
-const TestimonialCard = (props: Props) => {
+const TestimonialCard = () => {
   return (
     <Card className="max-w-lg mx-auto shrink-0 shadow-lg">
       <CardContent className="">

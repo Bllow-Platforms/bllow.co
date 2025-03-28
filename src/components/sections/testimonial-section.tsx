@@ -1,6 +1,7 @@
 import TestimonialCard from "../modules/testimonial";
 import SectionHeader from "./section-header";
 import { Swiper, SwiperSlide } from "swiper/react";
+// @ts-ignore
 import "swiper/css";
 
 const TestimonialSection = () => {
