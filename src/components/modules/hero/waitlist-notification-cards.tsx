@@ -14,7 +14,7 @@ const WaitlistNotificationCards = () => {
   const screenOffset = 50;
   const cardWidth = 350;
   const cardHeight = 120;
-  const noOfCards = 6;
+  const noOfCards = Math.floor(Math.random() * 50);
 
   useEffect(() => {
     if (!sceneRef.current) return;

@@ -14,7 +14,7 @@ export const Header: FC<IHeaderProps> = ({ isAuthenticated = false }) => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="absolute top-0 left-0 right-0 z-50">
       <div className="container py-8 px-4 mx-auto flex items-center justify-between">
         <div className="flex items-center gap-8">
           <a href="/">

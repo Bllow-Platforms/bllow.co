@@ -1,5 +1,7 @@
 import { Header } from "@/components/modules/header";
+import CtaSection from "@/components/sections/cta-section";
 import DonationsDisplaySection from "@/components/sections/donations-display-section";
+import Footer from "@/components/sections/footer-section";
 import MainHeroSection from "@/components/sections/main-hero-section";
 import MembershipSection from "@/components/sections/membership-section";
 import ShopSection from "@/components/sections/shop-section";
@@ -17,6 +19,8 @@ const Homepage = () => {
       <ShopSection />
       <ShowcaseWorkSection />
       <TestimonialSection />
+      <CtaSection />
+      <Footer />
     </div>
   );
 };
