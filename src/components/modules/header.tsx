@@ -3,6 +3,7 @@ import { FC, useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Menu, X } from "lucide-react";
+import { STUDIO_URL } from "@/constants";
 
 interface IHeaderProps {
   isAuthenticated?: boolean;
@@ -55,12 +56,12 @@ export const Header: FC<IHeaderProps> = ({ isAuthenticated = false }) => {
           <div className="flex items-center gap-3">
             {!isAuthenticated ? (
               <>
-                <a href={"/auth"}>
+                <a href={`${STUDIO_URL}/auth`}>
                   <Button className="bg-white text-primary hover:bg-white/90">
                     Sign Up
                   </Button>
                 </a>
-                <a href={"/auth/signin"}>
+                <a href={`${STUDIO_URL}/auth/signin`}>
                   <Button
                     variant="outline"
                     className="text-white hover:text-white/90 hover:bg-white/10"
